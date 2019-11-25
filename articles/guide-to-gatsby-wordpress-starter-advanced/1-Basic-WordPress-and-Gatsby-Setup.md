@@ -24,7 +24,7 @@ Hooking up our WordPress with a Gatsby generated site, will be the first steps w
       * [Create Pages](#create-pages)
       * [Create Posts](#create-posts)
 * [Final Thoughts :checkered_flag:](#final-thoughts-checkeredflag)
-* [Credits :heart:](#credits)
+* [Credits :heart:](#credits-heart)
 * [What's Next :arrow_right:](#whats-next-arrowright)
 
 
