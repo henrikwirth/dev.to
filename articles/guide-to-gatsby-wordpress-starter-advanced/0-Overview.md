@@ -10,7 +10,7 @@ canonical_url:
 
 ## Tutorial Outline
 
-1. [Basic WordPress & Gatsby Setup]()
+1. [Basic WordPress & Gatsby Setup](https://dev.to/nevernull/basic-wordpress-gatsby-setup-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-44d8)
 2. Setup Menu Navigation (Coming up: Tuesday)
 3. Deployment (Coming up: Wednesday)
 4. How to handle Images and make use of gatsby-image (Coming up: Thursday)
@@ -75,4 +75,4 @@ I'd love to have discussions about my approaches. If you have any questions, or 
 
 We will create our basic setup with WordPress & Gatsby.
 
-**Part 1** - [Basic WordPress & Gatsby Setup]()
+**Part 1** - [Basic WordPress & Gatsby Setup](https://dev.to/nevernull/basic-wordpress-gatsby-setup-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-44d8)
