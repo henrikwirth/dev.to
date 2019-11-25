@@ -1,9 +1,9 @@
 ---
-published: false
+published: true
 title: "Basic WordPress & Gatsby Setup - Guide to Gatsby WordPress Starter Advanced with Previews, i18n and more"
 cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/01/cover-1.png"
 description: "The Basic WordPress & Gatsby Setup part of a tutorial, explaining how to create an advanced Gatsby site with WordPress as a headless CMS."
-tags: gatsby, wordpress, webdev, jamstack
+tags: gatsby, wordpress, webdev, jamstack, tutorial
 series: "Guide to Gatsby WordPress Starter Advanced"
 canonical_url:
 ---
@@ -54,7 +54,7 @@ To check out if everything works, head over to the GraphiQL explorer inside your
 
 First of all [create a Gatsby](https://www.gatsbyjs.org/docs/quick-start/) project with:
 
-```
+```shell
 gatsby new gatsby-starter-wordpress-advanced
 ```
 
@@ -134,7 +134,6 @@ Add the following to your configs `module.exports` inside `plugins:[...]`:
         url: `${process.env.WORDPRESS_URL}/graphql`,
       },
     },
-
 ```
 
 This will hook up your Gatsby with the WordPress instance. And expose this data under `wpgraphql`. **Note: This makes your schema different to the one that is exposed in you WordPress GraphQL endpoint. As soon as you are usinging it with Gatsby, you now have to wrap your queries with `wpgraphql{...}`**.
@@ -260,6 +259,7 @@ const GET_PAGES = `
 
 You can see some variables are passed down the query. Refer to the [GraphQL Docs](https://graphql.org/learn/queries/#variables) for more information on GraphQL query variables. Also, you can see **pageInfo** with `hasNextPage` and `endCursor`. This will help for **pagination**, as we should not query for all pages/posts together, but rather do 10 at a time. **This will ensure, that we don't put too much pressure on our WordPress backend.**
 
+
 ```javascript
 // create/createPages.js
 
@@ -360,7 +360,7 @@ module.exports = async ({ actions, graphql, reporter }, options) => {
 - Then, we map over `wpPages` and call `createPage()`. An action passed down by the  `createPagesStatefully()` function given by the Gatsby API ([See docs here](https://www.gatsbyjs.org/docs/node-apis/#createPagesStatefully)).
 - In `createPage()` we set the path equal to the uri. This will be creating the slug for the individual page. The **component** gets our `pageTemplate` assigned and finally, we pass the pages data to the context.
 
-**-> See the complete file here: [createPages.js](https://github.com/nevernull/gatsby-starter-wordpress-advanced/blob/0-overview/create/createPages.js)**
+**-> See the complete file here: [createPages.js](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/blob/tutorial/part-1/create/createPages.js)**
 
 ---
 
@@ -368,7 +368,7 @@ module.exports = async ({ actions, graphql, reporter }, options) => {
 
 createPosts is basically the same with the exception of prefixing the path with `blog/`.
 
-**-> See the complete file here: [createPosts.js](https://github.com/nevernull/gatsby-starter-wordpress-advanced/blob/0-overview/create/createPosts.js)**
+**-> See the complete file here: [createPosts.js](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/blob/tutorial/part-1/create/createPosts.js)**
 
 
 ## Final Thoughts :checkered_flag:

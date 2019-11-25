@@ -1,9 +1,9 @@
 ---
-published: false
+published: true
 title: "Overview - Guide to Gatsby WordPress Starter Advanced with Previews, i18n and more"
 cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/cover-0.png"
 description: "The Overview of a tutorial, explaining how to create an advanced Gatsby site with WordPress as a headless CMS."
-tags: gatsby, wordpress, webdev, jamstack
+tags: gatsby, wordpress, webdev, jamstack, tutorial
 series: "Guide to Gatsby WordPress Starter Advanced"
 canonical_url:
 ---
@@ -11,9 +11,9 @@ canonical_url:
 ## Tutorial Outline
 
 1. [Basic WordPress & Gatsby Setup]()
-2. Setup Menu Navigation
-3. Deployment
-4. How to handle Images and make use of gatsby-image
+2. Setup Menu Navigation (Coming up: Tuesday)
+3. Deployment (Coming up: Wednesday)
+4. How to handle Images and make use of gatsby-image (Coming up: Thursday)
 5. PageBuilder with ACF Flexible Content
 6. Internationalization - i18n
 7. Dynamic Previews
@@ -75,4 +75,4 @@ I'd love to have discussions about my approaches. If you have any questions, or 
 
 We will create our basic setup with WordPress & Gatsby.
 
-**Part 1** - [Basic WordPress & Gatsby Setup](/2)
+**Part 1** - [Basic WordPress & Gatsby Setup]()
