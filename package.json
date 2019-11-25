@@ -10,5 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "dev-to-git": "^1.4.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxime1992/my-dev.to.git"
+  },
+  "private": true
 }
