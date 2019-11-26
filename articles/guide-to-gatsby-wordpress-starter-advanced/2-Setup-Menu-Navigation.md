@@ -8,7 +8,7 @@ series: "Guide to Gatsby WordPress Starter Advanced"
 canonical_url:
 ---
 
-In this part we will create some navigation based on a WordPress Menu, to reference our pages and posts, that we generated in the [previous part]().
+In this part we will create some navigation based on a WordPress Menu, to reference our pages and posts, that we generated in the [previous part](https://dev.to/nevernull/basic-wordpress-gatsby-setup-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-44d8).
 
 ## Table of Contents
 
