@@ -11,7 +11,7 @@ canonical_url:
 ## Tutorial Outline
 
 1. [Basic WordPress & Gatsby Setup](https://dev.to/nevernull/basic-wordpress-gatsby-setup-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-44d8)
-2. Setup Menu Navigation (Coming up: Tuesday)
+2. [Setup Menu Navigation](https://dev.to/nevernull/setup-menu-navigation-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-3bfl)
 3. Deployment (Coming up: Wednesday)
 4. How to handle Images and make use of gatsby-image (Coming up: Thursday)
 5. PageBuilder with ACF Flexible Content
