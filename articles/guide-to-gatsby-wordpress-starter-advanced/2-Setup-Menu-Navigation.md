@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Setup Menu Navigation - Guide to Gatsby WordPress Starter Advanced with Previews, i18n and more"
 cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/cover-2.png"
 description: "The Setup Menu Navigation part of a tutorial, explaining how to create an advanced Gatsby site with WordPress as a headless CMS."
@@ -309,7 +309,7 @@ const UniversalLink = ({ children, to, activeClassName, partiallyActive, ...othe
     )
   }
   return (
-    <a href={to} {...other} target="_blank">
+    <a href={to} {...other} target="_blank" rel="noopener noreferrer">
       {children}
     </a>
   )
@@ -328,7 +328,10 @@ import UniversalLink from "./UniversalLink"
 
 const MenuItem = ({ menuItem, wordPressUrl }) => {
   return (
-    <UniversalLink style={{marginRight: '20px' }} to={CreateLocalLink(menuItem, wordPressUrl)}>{menuItem.label}</UniversalLink>
+    <UniversalLink style={{ marginRight: "20px" }}
+                   to={CreateLocalLink(menuItem, wordPressUrl)}>
+      {menuItem.label}
+    </UniversalLink>
   )
 }
 

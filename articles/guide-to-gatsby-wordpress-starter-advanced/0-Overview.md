@@ -21,6 +21,8 @@ canonical_url:
 
 Depending on time and upcoming discussions, this outline might change. I might add some more parts, if I discover other topics, that could be of interest.
 
+**Find the latest version here**: [https://gatsby-starter-wordpress-advanced.netlify.com](https://gatsby-starter-wordpress-advanced.netlify.com/)
+
 ## Who is this tutorial for? 👥
 
 For people who want to get started with Gatsby in combination with WordPress and create a production ready client-site or personal sites with lots of nice features. You should have a basic understanding of WordPress and JavaScript. The tutorial will get more advanced and into edge-cases, the further you go.
