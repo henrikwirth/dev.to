@@ -349,4 +349,4 @@ Find the code here: [https://github.com/henrikwirth/gatsby-starter-wordpress-adv
 
 Next we'll build our navigation based on a WordPress menu.
 
-Coming up soon: **Part 3** - Deployment
+Coming up soon: **Part 4** - Deployment

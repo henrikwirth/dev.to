@@ -388,4 +388,4 @@ This part is highly inspired by [staticfuse's (gatsby-theme-publisher)](https://
 
 Next we'll build our navigation based on a WordPress menu.
 
-**Part 2** - [Setup Menu Navigation](https://dev.to/nevernull/setup-menu-navigation-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-3bfl)
+**Part 3** - [Setup Menu Navigation](https://dev.to/nevernull/setup-menu-navigation-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-3bfl)
