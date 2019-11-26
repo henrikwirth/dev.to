@@ -1,7 +1,7 @@
 ---
 published: true
 title: "Setup Menu Navigation - Guide to Gatsby WordPress Starter Advanced with Previews, i18n and more"
-cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/cover-2.png"
+cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/cover.png"
 description: "The Setup Menu Navigation part of a tutorial, explaining how to create an advanced Gatsby site with WordPress as a headless CMS."
 tags: gatsby, wordpress, webdev, tutorial
 series: "Guide to Gatsby WordPress Starter Advanced"
