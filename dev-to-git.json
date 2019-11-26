@@ -6,5 +6,9 @@
   {
     "id": 209230,
     "relativePathToArticle": "./articles/guide-to-gatsby-wordpress-starter-advanced/1-Basic-WordPress-and-Gatsby-Setup.md"
+  },
+  {
+    "id": 211293,
+    "relativePathToArticle": "./articles/guide-to-gatsby-wordpress-starter-advanced/2-Setup-Menu-Navigation.md"
   }
 ]

@@ -1,28 +1,45 @@
-# Setup Menu Navigation
+---
+published: false
+title: "Setup Menu Navigation - Guide to Gatsby WordPress Starter Advanced with Previews, i18n and more"
+cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/cover-2.png"
+description: "The Setup Menu Navigation part of a tutorial, explaining how to create an advanced Gatsby site with WordPress as a headless CMS."
+tags: gatsby, wordpress, webdev, tutorial
+series: "Guide to Gatsby WordPress Starter Advanced"
+canonical_url:
+---
 
-In this part we create some navigation based on a WordPress Menu, to reference our pages and posts, that we generated in the [previous part]().
+In this part we will create some navigation based on a WordPress Menu, to reference our pages and posts, that we generated in the [previous part]().
 
-## Create WordPress Menu
+## Table of Contents
+
+* [Create WordPress Menu :globe_with_meridians:](#create-wordpress-menu-globewithmeridians)
+* [Create components in Gatsby :computer:](#create-components-in-gatsby-computer)
+* [Menu Child Items :children_crossing:](#menu-child-items-childrencrossing)
+* [Support external Links :link:](#support-external-links-link)
+* [Final Thoughts :checkered_flag:](#final-thoughts-checkeredflag)
+* [What's Next :arrow_right:](#whats-next-arrowright)
+
+
+## Create WordPress Menu :globe_with_meridians:
 
 Let's get started by creating content in WordPress.
 
 1. Before creating a menu, make sure you have some **example pages** like so:
-<img src="images/02/pages.png" width="400" />
+<img src="https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/pages.png" width="400" />
 <br/><br/>
 
 2. **Create the Main Menu** with the pages you want to add. Assign the page to the primary location.
-<img src="images/02/menu.png" width="400" />
+<img src="https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/wp-menu.png" width="400" />
 <br/><br/>
 
-3. Play around in the GraphiQL explorer:
-![Menu GraphQL](images/02/menu-graphql.png)
+3. **Play around** in the GraphiQL explorer:
+![Menu GraphQL](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/menu-graphql.png)
 
     - If you use the WordPress **Twenty Twenty Theme** and set your menu to the primary position, you have to set the where->location to `PRIMARY`. Play around with the explorer to see what options you have in the location drop-down.
-
     - As you can see, the URL we get is not relative and there is now slug. We could extend the WPGraphQL schema to add another field for that. We will do this later. **For now we just gonna strip the domain from the URL in the frontend (quick and dirty).**
 
 
-## Create components in Gatsby
+## Create components in Gatsby :computer:
 
 Now, let's add some code to render our menu in Gatsby.
 
@@ -59,6 +76,11 @@ export const CreateLocalLink = (menuItem, wordPressUrl, blogURI='blog/') => {
   return newUri;
 };
 ```
+
+The GraphQL endpoint is serving us with absolute URLs to the WordPress instance. Therefore, we have to do some magic to workaround this and get relative URLs.
+
+> While this is an easy fix for the frontend, you can also add another field to the schema and do it in the backend. Then you don't need extra logic and client computation in the frontend. See this docs on [how to add custom fields to WPGraphQL](https://docs.wpgraphql.com/getting-started/custom-fields-and-meta/).
+
 ---
 
 2. Creating **MenuItem component**, that uses our util function:
@@ -91,18 +113,23 @@ import { StaticQuery, graphql } from "gatsby"
 import MenuItem from "./MenuItem"
 
 /**
- * Get all primary menuItems and the sites url.
+ * Define MenuItem fragment and get all primary menu items.
  */
 const MENU_QUERY = graphql`
+
+    fragment MenuItem on WPGraphQL_MenuItem {
+        id
+        label
+        url
+        title
+        target
+    }
+
     query GETMAINMENU {
         wpgraphql {
             menuItems(where: {location: PRIMARY}) {
                 nodes {
-                    id
-                    label
-                    url
-                    title
-                    target
+                    ...MenuItem
                 }
             }
             generalSettings {
@@ -110,7 +137,6 @@ const MENU_QUERY = graphql`
             }
         }
     }
-
 `
 
 const Menu = () => {
@@ -123,7 +149,7 @@ const Menu = () => {
           const wordPressUrl = data.wpgraphql.generalSettings.url
 
           return (
-            <div style={{marginBottom: '20px'}}>
+            <div style={{ marginBottom: "20px" }}>
               {
                 menuItems &&
                 menuItems.map((menuItem) => (
@@ -142,11 +168,12 @@ const Menu = () => {
 export default Menu
 ```
 
+Here we are using Gatsby's [StaticQuery](https://www.gatsbyjs.org/docs/static-query/) to get all the `MenuItems`. Also, we are making use of [fragments](https://www.gatsbyjs.org/docs/using-graphql-fragments/) to be able to reuse the query fields later on.
+
 ---
 
 
 4. And finally **adding the Menu** to `layout.js`:
-
 
 ```javascript
 // src/components/layout.js
@@ -207,11 +234,112 @@ Layout.propTypes = {
 export default Layout
 ```
 
+## Menu Child Items :children_crossing:
+
+This won't be part of our code-base for now, but in case you need the `childItems` of a `MenuItem` to create a multi-level navigation, you can do so, by adjusting the query like so:
+
+```javascript
+const MENU_QUERY_WITH_CHILDREN = graphql`
+
+  fragment MenuItem on WPGraphQL_MenuItem {
+    id
+    label
+    url
+    title
+    target
+  }
+
+  query GETMAINMENU {
+    wpgraphql {
+      menuItems(where: {location: PRIMARY}) {
+        nodes {
+          ...MenuItem
+          childItems {
+            nodes {
+              ...MenuItem
+              childItems {
+                nodes {
+                  ...MenuItem
+                }
+              }
+            }
+          }
+        }
+      }
+      generalSettings {
+        url
+      }
+    }
+  }
+`
+```
+
+This will get 3 levels of `menuItems`. You will need to add child items to the WordPress menu to see any results. Also, you would need to adjust your component, to support the extra 2 levels in a recursive manner.
+
+## Support external Links :link:
+
+Gatsby's Link component doesn't support the use of external links. We want to be able to add external Links to our menu and therefore have to do a little extra work as shown in the [Gatsby docs](https://www.gatsbyjs.org/docs/gatsby-link/#reminder-use-link-only-for-internal-links).
+
+1. **Create UniversalLink component**:
+
+```javascript
+// src/components/UniversalLink.js
+
+import React from "react"
+import { Link as GatsbyLink } from "gatsby"
+// Since DOM elements <a> cannot receive activeClassName
+// and partiallyActive, destructure the prop here and
+// pass it only to GatsbyLink
+const UniversalLink = ({ children, to, activeClassName, partiallyActive, ...other }) => {
+  // Tailor the following test to your environment.
+  // This example assumes that any internal link (intended for Gatsby)
+  // will start with exactly one slash, and that anything else is external.
+  const internal = /^\/(?!\/)/.test(to)
+  // Use Gatsby Link for internal links, and <a> for others
+  if (internal) {
+    return (
+      <GatsbyLink
+        to={to}
+        activeClassName={activeClassName}
+        partiallyActive={partiallyActive}
+        {...other}
+      >
+        {children}
+      </GatsbyLink>
+    )
+  }
+  return (
+    <a href={to} {...other} target="_blank">
+      {children}
+    </a>
+  )
+}
+export default UniversalLink
+```
+
+2. **Update `MenuItem.js`**:
+
+```javascript
+// src/components/MenuItem.js
+
+import React from "react"
+import { CreateLocalLink } from "../utils"
+import UniversalLink from "./UniversalLink"
+
+const MenuItem = ({ menuItem, wordPressUrl }) => {
+  return (
+    <UniversalLink style={{marginRight: '20px' }} to={CreateLocalLink(menuItem, wordPressUrl)}>{menuItem.label}</UniversalLink>
+  )
+}
+
+export default MenuItem
+```
+
 ## Final Thoughts :checkered_flag:
 
-If you run `gatsby develop` now, ...
+If you run `gatsby develop` now, you should see a Navigation with your menu items navigating to you relative page paths.
 
-Find the code here:
+Find the code here: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-2](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-2)
 
 
 ## What's Next :arrow_right:
