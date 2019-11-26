@@ -56,6 +56,12 @@ I just worked on a client project, that had all the above requirements and there
 - How to implement your multi-language setup with Polylang.
 - How you get Previews to work with dynamic data. Without the need of rebuilds.
 
+## Repository
+
+Here is the code to the code used in the tutorial. Checkout the branches for the different parts.
+
+{% github henrikwirth/gatsby-starter-wordpress-advanced no-readme %}
+
 ## Credits :heart:
 
 I want to thank some people, who helped me out a lot while working with those technologies. First of all thanks to all peeps on the [WPGraphQL Slack Chat](https://wpgql-slack.herokuapp.com/). Especially [Jason Bahl](https://github.com/jasonbahl), [Peter Pristas](https://github.com/pristas-peter), [Justin W Hall](https://github.com/justinwhall), [Esa-Matti Suuronen](https://github.com/esamattis), and all the others there I probably forgot about. If you ever need help, this is a great place to get well treated and sorted out. Thanks to [NeverNull](https://www.nevernull.io) for letting me work in this.

@@ -377,7 +377,7 @@ If you run `gatsby develop` now, you should be able to see your pages under http
 
 This will give you the basic setup we need for the upcoming parts of this tutorial.
 
-Find the code here:
+Find the code here: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-1](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-1)
 
 
 ## Credits :heart:
