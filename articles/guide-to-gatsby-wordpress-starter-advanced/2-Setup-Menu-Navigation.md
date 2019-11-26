@@ -13,9 +13,9 @@ In this part we will create some navigation based on a WordPress Menu, to refere
 ## Table of Contents
 
 * [Create WordPress Menu :globe_with_meridians:](#create-wordpress-menu-globewithmeridians)
-* [Create components in Gatsby :computer:](#create-components-in-gatsby-computer)
+* [Create Components in Gatsby :computer:](#create-components-in-gatsby-computer)
 * [Menu Child Items :children_crossing:](#menu-child-items-childrencrossing)
-* [Support external Links :link:](#support-external-links-link)
+* [Support External Links :link:](#support-external-links-link)
 * [Final Thoughts :checkered_flag:](#final-thoughts-checkeredflag)
 * [What's Next :arrow_right:](#whats-next-arrowright)
 
@@ -39,7 +39,7 @@ Let's get started by creating content in WordPress.
     - As you can see, the URL we get is not relative and there is now slug. We could extend the WPGraphQL schema to add another field for that. We will do this later. **For now we just gonna strip the domain from the URL in the frontend (quick and dirty).**
 
 
-## Create components in Gatsby :computer:
+## Create Components in Gatsby :computer:
 
 Now, let's add some code to render our menu in Gatsby.
 
@@ -276,7 +276,7 @@ const MENU_QUERY_WITH_CHILDREN = graphql`
 
 This will get 3 levels of `menuItems`. You will need to add child items to the WordPress menu to see any results. Also, you would need to adjust your component, to support the extra 2 levels in a recursive manner.
 
-## Support external Links :link:
+## Support External Links :link:
 
 Gatsby's Link component doesn't support the use of external links. We want to be able to add external Links to our menu and therefore have to do a little extra work as shown in the [Gatsby docs](https://www.gatsbyjs.org/docs/gatsby-link/#reminder-use-link-only-for-internal-links).
 
