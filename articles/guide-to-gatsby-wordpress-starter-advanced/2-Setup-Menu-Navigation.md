@@ -319,7 +319,7 @@ export default UniversalLink
 
 2. **Update `MenuItem.js`**:
 
-```JSX
+```jsx
 // src/components/MenuItem.js
 
 import React from "react"
