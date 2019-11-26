@@ -45,7 +45,7 @@ Now, let's add some code to render our menu in Gatsby.
 
 1. Creating a **utils function** to create relative URLs:
 
-```javascript
+```jsx
 // src/utils/index.js
 
 /**
@@ -85,7 +85,7 @@ The GraphQL endpoint is serving us with absolute URLs to the WordPress instance.
 
 2. Creating **MenuItem component**, that uses our util function:
 
-```javascript
+```jsx
 // src/components/MenuItem.js
 
 import React from "react"
@@ -104,7 +104,7 @@ export default MenuItem
 
 3. Creating **Menu component**, that uses our MenuItem component:
 
-```javascript
+```jsx
 // src/components/Menu.js
 
 import React from "react"
@@ -175,7 +175,7 @@ Here we are using Gatsby's [StaticQuery](https://www.gatsbyjs.org/docs/static-qu
 
 4. And finally **adding the Menu** to `layout.js`:
 
-```javascript
+```jsx
 // src/components/layout.js
 
 /**
@@ -238,7 +238,7 @@ export default Layout
 
 This won't be part of our code-base for now, but in case you need the `childItems` of a `MenuItem` to create a multi-level navigation, you can do so, by adjusting the query like so:
 
-```javascript
+```jsx
 const MENU_QUERY_WITH_CHILDREN = graphql`
 
   fragment MenuItem on WPGraphQL_MenuItem {
@@ -282,7 +282,7 @@ Gatsby's Link component doesn't support the use of external links. We want to be
 
 1. **Create UniversalLink component**:
 
-```javascript
+```jsx
 // src/components/UniversalLink.js
 
 import React from "react"
@@ -319,7 +319,7 @@ export default UniversalLink
 
 2. **Update `MenuItem.js`**:
 
-```javascript
+```JSX
 // src/components/MenuItem.js
 
 import React from "react"

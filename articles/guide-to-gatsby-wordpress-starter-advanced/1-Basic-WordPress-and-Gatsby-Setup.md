@@ -108,7 +108,7 @@ Replace `https://your-online-wordpress-instance.dev` with the URL to your online
 
 Now in your `gatsby-config.js` add this to the top before the `module.exports`:
 
-```javascript
+```jsx
 let activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 
@@ -125,7 +125,7 @@ The snippet above will help to require the right `.env` file.
 
 Add the following to your configs `module.exports` inside `plugins:[...]`:
 
-```javascript
+```jsx
     {
       resolve: "gatsby-source-graphql",
       options: {
@@ -149,7 +149,7 @@ Now let's see, how we can create pages and posts, based on the WordPress data. *
 
 #### Page Template
 
-```javascript
+```jsx
 //src/templates/pages/page.js
 import React  from "react"
 
@@ -177,7 +177,7 @@ export default Page
 
 #### Post Template
 
-```javascript
+```jsx
 import React  from "react"
 
 import Layout from "../../components/layout"
@@ -206,7 +206,7 @@ export default Post
 
 In your Gatsby node, add these lines:
 
-```javascript
+```jsx
 // gatsby-node.js
 
 const createPages = require("./create/createPages")
@@ -224,7 +224,7 @@ To separate their concerns, we split up the creation of posts and pages in diffe
 
 First we add some requires and define our GraphQL query.
 
-```javascript
+```jsx
 // create/createPages.js
 
 const pageTemplate = require.resolve('../src/templates/page/index.js');
@@ -260,7 +260,7 @@ const GET_PAGES = `
 You can see some variables are passed down the query. Refer to the [GraphQL Docs](https://graphql.org/learn/queries/#variables) for more information on GraphQL query variables. Also, you can see **pageInfo** with `hasNextPage` and `endCursor`. This will help for **pagination**, as we should not query for all pages/posts together, but rather do 10 at a time. **This will ensure, that we don't put too much pressure on our WordPress backend.**
 
 
-```javascript
+```jsx
 // create/createPages.js
 
 const allPages = []
