@@ -58,7 +58,7 @@ I just worked on a client project, that had all the above requirements and there
 
 ## Repository
 
-Here is the code to the code used in the tutorial. Checkout the branches for the different parts.
+Here is the code used in the tutorial. Checkout the branches for the different parts.
 
 {% github henrikwirth/gatsby-starter-wordpress-advanced no-readme %}
 
