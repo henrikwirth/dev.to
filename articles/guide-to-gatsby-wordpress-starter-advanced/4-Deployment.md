@@ -13,7 +13,6 @@ Finally we have the basics and it's time to see what we've done in production. I
 ## Netlify Setup
 
 1. First of all, make sure you have a repository, with all your work so far pushed to master. Preferably on GitHub. Now get yourself a Netlify account and connect it with your GitHub repository. I won't go into details for that. There is plenty of documentation out there.
-
 ![New Site from Git Button](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/04/new-site-from-git.png)
 
 
@@ -124,9 +123,9 @@ Thats it. You should be able to find your page under the domain as described abo
 Yaaah, our site is online now! :rocket: There is many more ways to deploy your site. But I guess you get a good idea of how things can work with the example of these two common approaches.
 
 
-Find the code base here: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-3](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-3)
+Find the code base here: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-4](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-3)
 
-Find the GitLab code base in this extra branch: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-3-gitlab](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-3-gitlab)
+Find the GitLab code base in this extra branch: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-4-gitlab](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-3-gitlab)
 
 
 ## What's Next :arrow_right:

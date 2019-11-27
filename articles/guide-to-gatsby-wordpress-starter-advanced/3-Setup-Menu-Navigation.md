@@ -339,7 +339,7 @@ export default MenuItem
 
 If you run `gatsby develop` now, you should see a Navigation with your menu items navigating to you relative page paths.
 
-Find the code here: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-2](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-2)
+Find the code here: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-3](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-3)
 
 
 ## What's Next :arrow_right:

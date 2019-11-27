@@ -360,7 +360,7 @@ module.exports = async ({ actions, graphql, reporter }, options) => {
 - Then, we map over `wpPages` and call `createPage()`. An action passed down by the  `createPagesStatefully()` function given by the Gatsby API ([See docs here](https://www.gatsbyjs.org/docs/node-apis/#createPagesStatefully)).
 - In `createPage()` we set the path equal to the uri. This will be creating the slug for the individual page. The **component** gets our `pageTemplate` assigned and finally, we pass the pages data to the context.
 
-**-> See the complete file here: [createPages.js](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/blob/tutorial/part-1/create/createPages.js)**
+**-> See the complete file here: [createPages.js](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/blob/tutorial/part-2/create/createPages.js)**
 
 ---
 
@@ -368,7 +368,7 @@ module.exports = async ({ actions, graphql, reporter }, options) => {
 
 createPosts is basically the same with the exception of prefixing the path with `blog/`.
 
-**-> See the complete file here: [createPosts.js](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/blob/tutorial/part-1/create/createPosts.js)**
+**-> See the complete file here: [createPosts.js](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/blob/tutorial/part-2/create/createPosts.js)**
 
 
 ## Final Thoughts :checkered_flag:
@@ -377,7 +377,7 @@ If you run `gatsby develop` now, you should be able to see your pages under http
 
 This will give you the basic setup we need for the upcoming parts of this tutorial.
 
-Find the code here: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-1](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-1)
+Find the code here: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-2](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-2)
 
 
 ## Credits :heart:
