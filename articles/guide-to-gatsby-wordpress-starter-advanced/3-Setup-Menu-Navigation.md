@@ -1,7 +1,7 @@
 ---
 published: true
 title: "Setup Menu Navigation - Guide to Gatsby WordPress Starter Advanced with Previews, i18n and more"
-cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/cover.png"
+cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/03/cover.png"
 description: "The Setup Menu Navigation part of a tutorial, explaining how to create an advanced Gatsby site with WordPress as a headless CMS."
 tags: gatsby, wordpress, webdev, tutorial
 series: "Guide to Gatsby WordPress Starter Advanced"
@@ -25,13 +25,13 @@ In this part we will create some navigation based on a WordPress Menu, to refere
 Let's get started by creating content in WordPress.
 
 1. Before creating a menu, make sure you have some **example pages** like so:
-<div><img src="https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/pages.png" width="400"/></div>
+<div><img src="https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/03/pages.png" width="400"/></div>
 
 2. **Create the Main Menu** with the pages you want to add. Assign the page to the primary location.
-![Menu WordPress](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/wp-menu.png)
+![Menu WordPress](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/03/wp-menu.png)
 
 3. **Play around** in the GraphiQL explorer:
-![Menu GraphQL](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/menu-graphql.png)
+![Menu GraphQL](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/03/menu-graphql.png)
     - If you use the WordPress **Twenty Twenty Theme** and set your menu to the primary position, you have to set the where->location to `PRIMARY`. Play around with the explorer to see what options you have in the location drop-down.
     - As you can see, the URL we get is not relative and there is now slug. We could extend the WPGraphQL schema to add another field for that. We will do this later. **For now we just gonna strip the domain from the URL in the frontend (quick and dirty).**
 
