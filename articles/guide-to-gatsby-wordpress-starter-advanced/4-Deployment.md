@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Deployment - Guide to Gatsby WordPress Starter Advanced with Previews, i18n and more"
 cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/04/cover.png"
 description: "The Deployment part of a tutorial, explaining how to create an advanced Gatsby site with WordPress as a headless CMS."

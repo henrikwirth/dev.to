@@ -346,4 +346,4 @@ Find the code here: [https://github.com/henrikwirth/gatsby-starter-wordpress-adv
 
 Next we'll build our navigation based on a WordPress menu.
 
-Coming up soon: **Part 4** - Deployment
+**Part 4** - [Deployment](https://dev.to/nevernull/deployment-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-2g2o)

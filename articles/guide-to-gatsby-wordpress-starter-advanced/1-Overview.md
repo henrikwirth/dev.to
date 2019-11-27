@@ -13,7 +13,7 @@ canonical_url:
 1. [Overview](https://dev.to/nevernull/overview-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-583l)
 2. [Basic WordPress & Gatsby Setup](https://dev.to/nevernull/basic-wordpress-gatsby-setup-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-44d8)
 3. [Setup Menu Navigation](https://dev.to/nevernull/setup-menu-navigation-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-3bfl)
-4. Deployment (Coming up: Wednesday)
+4. [Deployment](https://dev.to/nevernull/deployment-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-2g2o)
 5. How to handle Images and make use of gatsby-image (Coming up: Thursday)
 6. PageBuilder with ACF Flexible Content
 7. Internationalization - i18n
