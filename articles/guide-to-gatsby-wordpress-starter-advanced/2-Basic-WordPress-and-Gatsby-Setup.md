@@ -1,7 +1,7 @@
 ---
 published: true
 title: "Basic WordPress & Gatsby Setup - Guide to Gatsby WordPress Starter Advanced with Previews, i18n and more"
-cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/01/cover.png"
+cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/cover.png"
 description: "The Basic WordPress & Gatsby Setup part of a tutorial, explaining how to create an advanced Gatsby site with WordPress as a headless CMS."
 tags: gatsby, wordpress, webdev, tutorial
 series: "Guide to Gatsby WordPress Starter Advanced"
@@ -47,7 +47,7 @@ git clone https://github.com/wp-graphql/wp-graphiql
 
 To check out if everything works, head over to the GraphiQL explorer inside your WordPress Admin area and start playing around with it:
 
-![GraphiQL Explorer](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/01/graphiql-wp.png)
+![GraphiQL Explorer](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/graphiql-wp.png)
 
 
 ## Create initial Gatsby site :computer:
@@ -140,7 +140,7 @@ This will hook up your Gatsby with the WordPress instance. And expose this data 
 
 Try running `gatsby develop` and navigate to `http://localhost:8000/___graphql`. You will see something like this. Play around with the GraphiQL-Explorer to get familiar with the WPGraphQL schema.
 
-![GraphiQL Explorer](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/01/graphiql.png)
+![GraphiQL Explorer](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/02/graphiql.png)
 
 
 ### Create Pages & Posts

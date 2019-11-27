@@ -1,14 +1,18 @@
 [
   {
     "id": 209223,
-    "relativePathToArticle": "./articles/guide-to-gatsby-wordpress-starter-advanced/0-Overview.md"
+    "relativePathToArticle": "./articles/guide-to-gatsby-wordpress-starter-advanced/1-Overview.md"
   },
   {
     "id": 209230,
-    "relativePathToArticle": "./articles/guide-to-gatsby-wordpress-starter-advanced/1-Basic-WordPress-and-Gatsby-Setup.md"
+    "relativePathToArticle": "./articles/guide-to-gatsby-wordpress-starter-advanced/2-Basic-WordPress-and-Gatsby-Setup.md"
   },
   {
     "id": 211293,
-    "relativePathToArticle": "./articles/guide-to-gatsby-wordpress-starter-advanced/2-Setup-Menu-Navigation.md"
+    "relativePathToArticle": "./articles/guide-to-gatsby-wordpress-starter-advanced/3-Setup-Menu-Navigation.md"
+  },
+  {
+    "id": 211957,
+    "relativePathToArticle": "./articles/guide-to-gatsby-wordpress-starter-advanced/4-Deployment.md"
   }
 ]
