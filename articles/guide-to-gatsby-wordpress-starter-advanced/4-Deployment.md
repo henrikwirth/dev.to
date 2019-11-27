@@ -10,7 +10,17 @@ canonical_url:
 
 Finally we have the basics and it's time to see what we've done in production. I'll quickly go through some ways to deploy your site. I will mainly focus on Netlify for this, but also give an example for GitLab pages.
 
-## Netlify Setup
+## Table of Contents
+
+* [Netlify Setup :zap:](#netlify-setup-zap)
+* [WordPress Plugin :floppy_disk:](#wordpress-plugin-floppydisk)
+* [GitLab Setup :cat:](#gitlab-setup-cat)
+   * [Gatsby Prefix Configuration](#gatsby-prefix-configuration)
+   * [GitLab CI Configuration](#gitlab-ci-configuration)
+* [Final Thoughts :checkered_flag:](#final-thoughts-checkeredflag)
+* [What's Next :arrow_right:](#whats-next-arrowright)
+
+## Netlify Setup :zap:
 
 1. First of all, make sure you have a repository, with all your work so far pushed to master. Preferably on GitHub. Now get yourself a Netlify account and connect it with your GitHub repository. I won't go into details for that. There is plenty of documentation out there.
 ![New Site from Git Button](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/04/new-site-from-git.png)
@@ -28,7 +38,7 @@ Finally we have the basics and it's time to see what we've done in production. I
 ![Netlify Build Hook](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/04/netlify-site.png)
 
 
-## WordPress Plugin
+## WordPress Plugin :floppy_disk:
 
 We will setup a WordPress plugin, to be able to make use of the build hook. With this, we can decide when to trigger a build. For example, you can build only when pressing the build button, or after every post/page update. There is plenty more options.
 
@@ -57,7 +67,7 @@ Now we can trigger our rebuilds with the **Deploy Website** button in the admin 
 
 :ballot_box_with_check: Easy deployments done
 
-## GitLab Setup
+## GitLab Setup :cat:
 
 We really like working with GitLab on our client projects. With GitLab Pages you can have an easy way to setup a preview page, that is only accessible for authorized users, that are part of the project. you can also make it public if you want so.
 
