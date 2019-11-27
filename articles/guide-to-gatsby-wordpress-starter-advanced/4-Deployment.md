@@ -14,19 +14,19 @@ Finally we have the basics and it's time to see what we've done in production. I
 
 1. First of all, make sure you have a repository, with all your work so far pushed to master. Preferably on GitHub. Now get yourself a Netlify account and connect it with your GitHub repository. I won't go into details for that. There is plenty of documentation out there.
 
-![New Site from Git Button](images/04/new-site-from-git.png)
+![New Site from Git Button](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/04/new-site-from-git.png)
 
 
 2. If you create a project from your Gatsby repository, Netlify should recognize, that it is a Gatsby project and you should see something like this:
-![Netlify Build Options](images/04/netlify-build-options.png)
+![Netlify Build Options](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/04/netlify-build-options.png)
 
 3. Now go to the **Build & Deploy** settings and **add a build hook**.
-![Netlify Build Hook](images/04/netlify-build-hook.png)
+![Netlify Build Hook](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/04/netlify-build-hook.png)
 
 4. **Copy the build hook URL for later use**.
 
 5. By the time you got your build hook, Netlify should already be finished building your site. **Checkout your Netlify domain**.
-![Netlify Build Hook](images/04/netlify-site.png)
+![Netlify Build Hook](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/04/netlify-site.png)
 
 
 ## WordPress Plugin
@@ -47,7 +47,7 @@ git clone https://github.com/crgeary/wp-jamstack-deployments
 1. Activate the plugin.
 
 2. Now **go to Settings->Deployments** and fill in the form:
-![WP JAMstack Deployments Settings](images/04/wp-plugin-settings.png)
+![WP JAMstack Deployments Settings](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/04/wp-plugin-settings.png)
   - **Build Hook URL**: The Netlify build hook we created before.
   - **Badge Image URL**: We can find the badge URL in the **General->Status badges** settings of Netlify. It consists of 2 URLs. The first one is the one we need for the status badge.
   - **Badge Link**: When you click on the Netlify badge, the link you set here will open. You can either set it to your Netlify site domain, or you use the second URL from the status badge, which will link to your Netlify deploy status page.
@@ -77,7 +77,7 @@ Now this way we can define the path prefix either in our .env files, our we use 
 ### GitLab CI Configuration
 
 Depending on where your project is placed, GitLab will host your page on a domain, that will look like so:
-![GitLab Page Domain Naming](images/04/gitlab-page-names.png)
+![GitLab Page Domain Naming](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/04/gitlab-page-names.png)
 
 > Checkout: [GitLab Page Domain Naming](https://docs.gitlab.com/ee/user/project/pages/getting_started_part_one.html#gitlab-pages-default-domain-names)
 
@@ -87,7 +87,7 @@ As you can see, you will have `/projectname` in your URL. Therefore, we need to 
 
 1.) **Head over to your GitLab** project, go to **Settings->CI/CD->Variables** and add your `PATH_PREFIX` like so:
 
-![GitLab CI Variables](images/04/gitlab-vars.png)
+![GitLab CI Variables](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/04/gitlab-vars.png)
 
 
 Now the only thing missing is the CI config file inside your Gatsby projects root.
