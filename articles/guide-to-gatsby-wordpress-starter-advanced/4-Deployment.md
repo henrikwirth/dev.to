@@ -67,7 +67,7 @@ Checkout the [docs on GitLab Pages](https://docs.gitlab.com/ee/user/project/page
 
 Go to your `gatsby-config.js` and add the following line inside `module.exorts = {...}`:
 
-```
+```javascript
   pathPrefix: `${process.env.PATH_PREFIX}`,
 ```
 
@@ -93,7 +93,7 @@ Now the only thing missing is the CI config file inside your Gatsby projects roo
 
 2.) **Add following snippet** to your `.gitlab-ci.yml`:
 
-```
+```yaml
 # .gitlab-ci.yml
 
 image: node:12.13.0
@@ -123,9 +123,9 @@ Thats it. You should be able to find your page under the domain as described abo
 Yaaah, our site is online now! :rocket: There is many more ways to deploy your site. But I guess you get a good idea of how things can work with the example of these two common approaches.
 
 
-Find the code base here: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-4](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-3)
+Find the code base here: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-4](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-4)
 
-Find the GitLab code base in this extra branch: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-4-gitlab](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-3-gitlab)
+Find the GitLab code base in this extra branch: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-4-gitlab](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-4-gitlab)
 
 
 ## What's Next :arrow_right:
