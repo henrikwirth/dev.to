@@ -14,9 +14,79 @@ In this part I will show you, how you can make use of gatsby-images superpowers 
 
 ## Table of Contents
 
-## Create Images in WordPress
+## Add Images to WordPress pages
 
-Let's create some
+Let's add some featured images to our pages.
+
+![Add Featured Image](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/05/add-featured-image.png)
+
+Now run `gatsby develop` and checkout http://localhost:8000/___graphql.
+
+**Run**:
+
+```graphql
+query GETPAGES {
+  wpgraphql {
+    pages {
+      nodes {
+        title
+        uri
+        featuredImage {
+          sourceUrl
+        }
+      }
+    }
+  }
+}
+```
+
+**You should see something like this**:
+
+![GraphQL Image Output](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/05/graphql-image-output.png)
+
+As you can see we get an absolute path to the featured images with `sourceUrl`. **What we want instead though, is a local static image, with the abilities to use `gatsby-image`'s filters.**
+
+> I already wrote [an article](https://dev.to/nevernull/gatsby-with-wpgraphql-acf-and-gatbsy-image-72m) about this, but for the sake of integrity of the tutorial series, I gonna add the information here too.
+
+## Make use of gatsby-image
+
+We gonna make use of Gatsby's abilities to add custom resolvers, to customize the schema, so that WordPress images get handled as local `File`s. This will then automatically treat the images as files, that are getting processed by `gatsby-image`.
+
+### Add Resolver to Gatsby
+
+```javascript
+const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
+
+exports.createResolvers = (
+  {
+    actions,
+    cache,
+    createNodeId,
+    createResolvers,
+    store,
+    reporter,
+  },
+) => {
+  const { createNode } = actions
+  createResolvers({
+    WPGraphQL_MediaItem: {
+      imageFile: {
+        type: `File`,
+        resolve(source, args, context, info) {
+          return createRemoteFileNode({
+            url: source.sourceUrl,
+            store,
+            cache,
+            createNode,
+            createNodeId,
+            reporter,
+          })
+        },
+      },
+    },
+  })
+}
+```
 
 - WordPress Bilder anlegen
   - Featured images
