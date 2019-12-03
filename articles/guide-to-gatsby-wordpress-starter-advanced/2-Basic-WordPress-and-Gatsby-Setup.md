@@ -145,7 +145,7 @@ Try running `gatsby develop` and navigate to `http://localhost:8000/___graphql`.
 
 ### Create Pages & Posts
 
-Now let's see, how we can create pages and posts, based on the WordPress data. **First remove the `page-2.js` in your pages folder.** Then, we start with some very simple templates.
+Now let's see, how we can create pages and posts, based on the WordPress data. **First remove the `index.js` and `page-2.js` in your pages folder.** Then, we start with some very simple templates.
 
 #### Page Template
 
@@ -250,6 +250,7 @@ const GET_PAGES = `
                     pageId
                     content
                     uri
+                    isFrontPage
                 }
             }
         }
@@ -339,9 +340,18 @@ module.exports = async ({ actions, graphql, reporter }, options) => {
   await fetchPages({ first: itemsPerPage, after: null }).then((wpPages) => {
 
     wpPages && wpPages.map((page) => {
+      let pagePath = `/${page.uri}/`
+
+      /**
+       * If the page is the front page, the page path should not be the uri,
+       * but the root path '/'.
+       */
+      if(page.isFrontPage) {
+        pagePath = '/'
+      }
 
       createPage({
-        path: `/${page.uri}/`,
+        path: pagePath,
         component: pageTemplate,
         context: {
           page: page,
@@ -358,6 +368,7 @@ module.exports = async ({ actions, graphql, reporter }, options) => {
 
 - So here we first define our `fetchPages()` function, that will recursively keep on fetching pages (10 at a time) until there is no more to fetch. It adds them to the `allPages` array.
 - Then, we map over `wpPages` and call `createPage()`. An action passed down by the  `createPagesStatefully()` function given by the Gatsby API ([See docs here](https://www.gatsbyjs.org/docs/node-apis/#createPagesStatefully)).
+- We use `page.isFrontPage` to check if we need to adjust the path. For the home page we want the path to be the root path `/` instead of `/home/`.
 - In `createPage()` we set the path equal to the uri. This will be creating the slug for the individual page. The **component** gets our `pageTemplate` assigned and finally, we pass the pages data to the context.
 
 **-> See the complete file here: [createPages.js](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/blob/tutorial/part-2/create/createPages.js)**
