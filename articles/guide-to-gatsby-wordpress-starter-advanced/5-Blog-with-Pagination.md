@@ -1,7 +1,7 @@
 ---
-published: false
+published: true
 title: "Blog with Pagination - Guide to Gatsby WordPress Starter Advanced with Previews, i18n and more"
-cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/05/cover.png"
+cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/05/cover-05.png"
 description: "The Blog with Pagination part of a tutorial, explaining how to create an advanced Gatsby site with WordPress as a headless CMS."
 tags: gatsby, wordpress, webdev, tutorial
 series: "Guide to Gatsby WordPress Starter Advanced"
@@ -28,7 +28,7 @@ I figured, for further parts of the tutorial, it will make sense to implement th
   - [2.) Adjust createPosts.js](#2-adjust-createpostsjs)
 - [Final Thoughts :checkered_flag:](#final-thoughts-checkeredflag)
 - [What's Next :arrow_right:](#whats-next-arrowright)
--
+
 
 ## Add content to WordPress :computer:
 
