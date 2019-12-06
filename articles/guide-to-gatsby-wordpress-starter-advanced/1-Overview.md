@@ -14,11 +14,12 @@ canonical_url:
 2. [Basic WordPress & Gatsby Setup](https://dev.to/nevernull/basic-wordpress-gatsby-setup-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-44d8)
 3. [Setup Menu Navigation](https://dev.to/nevernull/setup-menu-navigation-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-3bfl)
 4. [Deployment](https://dev.to/nevernull/deployment-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-2g2o)
-5. How to handle Images and make use of gatsby-image (Coming up: Thursday)
-6. PageBuilder with ACF Flexible Content
-7. Internationalization - i18n
-8. Dynamic Previews
-9. ...
+5. Blog Posts with Pagination
+6. How to handle Images and make use of gatsby-image
+7. PageBuilder with ACF Flexible Content
+8. Internationalization - i18n
+9. Dynamic Previews
+10. ...
 
 Depending on time and upcoming discussions, this outline might change. I might add some more parts, if I discover other topics, that could be of interest.
 

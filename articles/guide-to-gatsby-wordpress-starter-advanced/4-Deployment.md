@@ -140,6 +140,6 @@ Find the GitLab code base in this extra branch: [https://github.com/henrikwirth/
 
 ## What's Next :arrow_right:
 
-In the next part of the series, we will discover how to fetch images from WordPress in a way, that makes it possible to use the powerful [gatsby-image](https://using-gatsby-image.gatsbyjs.org/) plugin.
+In the upcoming part we will introduce a blog page with pagination, which will serve as overview for our blog post previews.
 
-Coming up soon: **Part 5** - How to handle Images and make use of gatsby-image
+Coming up soon: **Part 5** - Blog Posts with Pagination
