@@ -16,15 +16,15 @@ In this part I will show you, how you can make use of gatsby-images superpowers 
 
 - [Add Images to WordPress pages :computer:](#add-images-to-wordpress-pages-computer)
 - [Make use of gatsby-image :camera:](#make-use-of-gatsby-image-camera)
-  - [1.) Add Resolver to Gatsby](#1-add-resolver-to-gatsby)
-  - [2.) Add fluid Image fragment](#2-add-fluid-image-fragment)
-  - [3.) Add fragment to createPages.js and createPosts.js](#3-add-fragment-to-createpagesjs-and-createpostsjs)
-    - [Update createPages.js](#update-createpagesjs)
-    - [Add PageTemplateFragment](#add-pagetemplatefragment)
-    - [Update createPosts.js](#update-createpostsjs)
-    - [Update PostTemplateFragment and BlogPreviewFragment](#update-posttemplatefragment-and-blogpreviewfragment)
-  - [4.) Update Image.js to FluidImage.js](#4-update-imagejs-to-fluidimagejs)
-  - [5.) Update page, blog and post template](#5-update-page-blog-and-post-template)
+   - [1.) Add Resolver to Gatsby](#1-add-resolver-to-gatsby)
+   - [2.) Add fluid Image fragment](#2-add-fluid-image-fragment)
+   - [3.) Add fragment to createPages.js and createPosts.js](#3-add-fragment-to-createpagesjs-and-createpostsjs)
+      - [Update createPages.js](#update-createpagesjs)
+      - [Add PageTemplateFragment](#add-pagetemplatefragment)
+      - [Update createPosts.js](#update-createpostsjs)
+      - [Update PostTemplateFragment and BlogPreviewFragment](#update-posttemplatefragment-and-blogpreviewfragment)
+   - [4.) Update Image.js to FluidImage.js](#4-update-imagejs-to-fluidimagejs)
+   - [5.) Update page, blog and post template](#5-update-page-blog-and-post-template)
 - [Post Inline images :pencil:](#post-inline-images-pencil)
 - [Final Thoughts :checkered_flag:](#final-thoughts-checkeredflag)
 - [What's Next :arrow_right:](#whats-next-arrowright)
@@ -499,7 +499,7 @@ But checkout [gatsby-wpgraphql-inline-images](https://www.gatsbyjs.org/packages/
 
 ## Final Thoughts :checkered_flag:
 
-Checkout how [my site here](https://gatsby-starter-wordpress-advanced.netlify.com/) looks now:
+Checkout how [the site](https://gatsby-starter-wordpress-advanced.netlify.com/) looks now:
 
 ![Guide to Gatsby WordPress Starter Advanced - Screenshot](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/06/preview-screenshot.png)
 
