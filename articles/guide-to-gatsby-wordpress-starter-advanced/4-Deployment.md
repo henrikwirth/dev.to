@@ -142,4 +142,4 @@ Find the GitLab code base in this extra branch: [https://github.com/henrikwirth/
 
 In the upcoming part we will introduce a blog page with pagination, which will serve as overview for our blog post previews.
 
-Coming up soon: **Part 5** - [Blog with Pagination](https://dev.to/nevernull/blog-with-pagination-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-50g5)
+**Part 5** - [Blog with Pagination](https://dev.to/nevernull/blog-with-pagination-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-50g5)

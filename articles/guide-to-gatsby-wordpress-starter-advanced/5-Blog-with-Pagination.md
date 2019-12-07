@@ -530,4 +530,4 @@ Find the code base here: [https://github.com/henrikwirth/gatsby-starter-wordpres
 
 In the next part of the series, we will discover how to fetch images from WordPress in a way, that makes it possible to use the powerful [gatsby-image](https://using-gatsby-image.gatsbyjs.org/) plugin.
 
-Coming up soon: **Part 6** - How to handle Images and make use of gatsby-image
+**Part 6** - [How to handle Images and make use of gatsby-image](https://dev.to/nevernull/how-to-handle-images-and-make-use-of-gatsby-image-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-g9b)

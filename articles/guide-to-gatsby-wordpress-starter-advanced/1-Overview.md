@@ -15,7 +15,7 @@ canonical_url:
 3. [Setup Menu Navigation](https://dev.to/nevernull/setup-menu-navigation-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-3bfl)
 4. [Deployment](https://dev.to/nevernull/deployment-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-2g2o)
 5. [Blog with Pagination](https://dev.to/nevernull/blog-with-pagination-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-50g5)
-6. How to handle Images and make use of gatsby-image
+6. [How to handle Images and make use of gatsby-image](https://dev.to/nevernull/how-to-handle-images-and-make-use-of-gatsby-image-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-g9b)
 7. PageBuilder with ACF Flexible Content
 8. Internationalization - i18n
 9. Dynamic Previews
