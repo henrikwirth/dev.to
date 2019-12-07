@@ -15,7 +15,7 @@ In this part I will show you, how you can make use of gatsby-images superpowers 
 ## Table of Contents
 
 - [Add Images to WordPress pages :computer:](#add-images-to-wordpress-pages-computer)
-- [Make use of gatsby-image :camera:](#make-use-of-gatsby-image-camera)
+- [Make use of gatsbyimage :camera:](#make-use-of-gatsby-image-camera)
    - [1.) Add Resolver to Gatsby](#1-add-resolver-to-gatsby)
    - [2.) Add fluid Image fragment](#2-add-fluid-image-fragment)
    - [3.) Add fragment to createPages.js and createPosts.js](#3-add-fragment-to-createpagesjs-and-createpostsjs)
