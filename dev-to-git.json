@@ -22,5 +22,9 @@
   {
     "id": 216573,
     "relativePathToArticle": "./articles/guide-to-gatsby-wordpress-starter-advanced/6-Images.md"
+  },
+  {
+    "id": 217731,
+    "relativePathToArticle": "./articles/guide-to-gatsby-wordpress-starter-advanced/7-PageBuilder-with-ACF-Flexible-Content.md"
   }
 ]
