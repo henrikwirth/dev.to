@@ -18,23 +18,30 @@ Now let's move forward and build a page builder with Advanced Custom Field's **F
 
 ## Table of Contents
 
-<!-- TOC -->
+- [Install WordPress Plugins :floppy_disk:](#install-wordpress-plugins-floppydisk)
+- [Create ACF fields and Content :pencil2:](#create-acf-fields-and-content-pencil2)
+   - [1.) Create Flexible Content field](#1-create-flexible-content-field)
+   - [2.) Create Layouts inside the Flexible Content field](#2-create-layouts-inside-the-flexible-content-field)
+   - [3.) Update your Pages](#3-update-your-pages)
+   - [4.) Checkout the Schema](#4-checkout-the-schema)
+- [Add layouts to Gatsby :newspaper:](#add-layouts-to-gatsby-newspaper)
+   - [1.) Add Hero layout](#1-add-hero-layout)
+   - [2.) Add TextBlock layout](#2-add-textblock-layout)
+   - [3.) Add data to our page queries](#3-add-data-to-our-page-queries)
+      - [Update pages data.js](#update-pages-datajs)
+      - [Update createPages.js](#update-createpagesjs)
+      - [Create utility function getAllLayoutsData](#create-utility-function-getalllayoutsdata)
+   - [4.) Add AllLayouts component](#4-add-alllayouts-component)
+   - [5.) Update Page template](#5-update-page-template)
+- [Improve performance through Template-String technique :tophat:](#improve-performance-through-template-string-technique-tophat)
+   - [1.) Add more utiliy functions](#1-add-more-utiliy-functions)
+   - [2.) Add `lodash.uniqby` and `lodash.isempty`](#2-add-lodashuniqby-and-lodashisempty)
+   - [3.) Add/update createPages.js](#3-addupdate-createpagesjs)
+   - [4.) Add string based template](#4-add-string-based-template)
+- [Explanation Video :movie_camera:](#explanation-video-moviecamera)
+- [Final Thoughts :checkered_flag:](#final-thoughts-checkeredflag)
+- [What's Next :arrow_right:](#whats-next-arrowright)
 
-- [Table of Contents](#table-of-contents)
-- [Install WordPress Plugins :floppy_disk:](#install-wordpress-plugins-floppy_disk)
-- [Create ACF fields and Content](#create-acf-fields-and-content)
-  - [1.) Create Flexible Content field](#1-create-flexible-content-field)
-  - [2.) Create Layouts inside the Flexible Content field](#2-create-layouts-inside-the-flexible-content-field)
-  - [3.) Update your Pages](#3-update-your-pages)
-  - [4.) Checkout the Schema](#4-checkout-the-schema)
-- [Add layouts to Gatsby](#add-layouts-to-gatsby)
-  - [1.) Add Hero layout](#1-add-hero-layout)
-  - [2.) Add TextBlock layout](#2-add-textblock-layout)
-  - [3.) Add data to our page queries](#3-add-data-to-our-page-queries)
-    - [Update pages data.js](#update-pages-datajs)
-    - [Update createPages.js](#update-createpagesjs)
-
-<!-- /TOC -->
 
 ## Install WordPress Plugins :floppy_disk:
 
@@ -51,11 +58,11 @@ git clone https://github.com/wp-graphql/wp-graphql-acf
 
 The WPGraphQL for Advanced Custom Fields is the plugin, that exposes the ACF fields to the GraphQL Schema. There is some good [documentation of it here](https://docs.wpgraphql.com/extensions/wpgraphql-advanced-custom-fields/).
 
-## Create ACF fields and Content
+## Create ACF fields and Content :pencil2:
 
 We will add a flexible content field and 2 layouts to start with.
 
-> **Note**: If you want to skip this parts 1.) and 2.), I prepared a `.json` export for the 2 layouts. Find it [right here]().
+> **Note**: If you want to skip this parts 1.) and 2.), I prepared a `.json` export for the 2 layouts. Find it [right here](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/blob/tutorial/part-7/wordpress/acf-export.json).
 
 
 ### 1.) Create Flexible Content field
@@ -130,7 +137,7 @@ query GET_LAYOUTS {
 
 - Check the results and get familiar with your schema.
 
-## Add layouts to Gatsby
+## Add layouts to Gatsby :newspaper:
 
 Let's start by adding our layout components. The folder structure for our layouts will look like so:
 
@@ -496,7 +503,7 @@ export default Page
 
 **Eh voilà, we have a page builder. We can define layouts/components in our WordPress backend with ACF and dynamically render React components, depending on the type.**
 
-## Improve performance through Template-String technique
+## Improve performance through Template-String technique :tophat:
 
 > I won't explain too much detail in this written part. Please watch [the video]() for it.
 
@@ -711,8 +718,25 @@ export default Page
 
 - What we do here, is to decide **what components actually get imported**. We only want to import components, that are part of the created page. Not more not less.
 
-## Explanation Video
+## Explanation Video :movie_camera:
 
 This tutorial can be a lot to take in and it is hard for me to write a super detailed explanation of everything down. So I decided to record a video, where I would go through the steps mentioned in this tutorial and verbally explain what my thoughts to the process are.
 
 I hope this will make it more accessible for everyone.
+
+{% youtube somecode %}
+
+
+## Final Thoughts :checkered_flag:
+
+Checkout how [the site](https://gatsby-starter-wordpress-advanced.netlify.com/) looks now:
+
+...
+
+Find the code base here: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-7](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-7)
+
+
+## What's Next :arrow_right:
+
+
+Coming up soon: **Part 8** - Internationalization
