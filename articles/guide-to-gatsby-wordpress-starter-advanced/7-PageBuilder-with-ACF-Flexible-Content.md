@@ -586,14 +586,22 @@ module.exports.createPageWithTemplate = ({ createTemplate, templateCacheFolder, 
 - Most of the things should be explained with the comments I added. Basically we create new template files based on a template-string file.
 - Then we create the pages, based on that generated file.
 
+### 2.) Add layoutMapping.js
 
-### 2.) Add `lodash.uniqby` and `lodash.isempty`
+```javascript
+module.exports = {
+  page_Pagebuilder_Layouts_Hero: "Hero",
+  page_Pagebuilder_Layouts_TextBlock: "TextBlock",
+}
+```
+
+### 3.) Add `lodash.uniqby` and `lodash.isempty`
 
 ```shell
 yarn add lodash.uniqby lodash.isempty
 ```
 
-### 3.) Add/update createPages.js
+### 4.) Add/update createPages.js
 
 First the top part:
 
@@ -669,11 +677,11 @@ wpPages && wpPages.map((page) => {
     })
 ```
 
-### 4.) Add string based template
+### 5.) Add string based template
 
 In JavaScript you can use template strings to pass down arguments or logic in general to your string. We make use of that to literally create a template based on our `src/templates/page/index.js` component.
 
-```
+```javascript
 module.exports = (imports) => {
   return`
 // This is a temporary generated file. Changes to this file will be overwritten eventually!
