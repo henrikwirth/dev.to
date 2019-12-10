@@ -101,7 +101,6 @@ Now that we have the ACF fields setup, we need to update our pages.
   - Add your blocks and fill in some data.
 - I'm using the image for the `Hero` block and still leave it in thew `featuredImage`. This will give me the option to use a different featuredImage for social previews if I want to do so, later on.
 
-> **Note**: At this point we don't need the Gutenberg editor anymore for our pages. There is no option to disable it yet. There are some plugins I think, but what I usually do, is to just hide the content blocks through a custom plugin. I might introduce that maybe in another tutorial part.
 
 ### 4.) Checkout the Schema
 
