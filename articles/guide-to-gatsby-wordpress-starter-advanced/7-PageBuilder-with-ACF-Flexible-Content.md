@@ -47,10 +47,13 @@ Now let's move forward and build a page builder with Advanced Custom Field's **F
 
 - [Advanced Custom Fields - PRO](https://www.advancedcustomfields.com/pro/)
 - [WPGraphQL for Advanced Custom Fields](https://github.com/wp-graphql/wp-graphql-acf)
+- [Classic Editor](https://wordpress.org/plugins/classic-editor/)
 
-**Install Advanced Custom Fields PRO and activate your license**. We **need the PRO** version if we want to use the flexible content field.
+1.) **Install Advanced Custom Fields PRO and activate your license**. We **need the PRO** version if we want to use the flexible content field.
 
-You can download the .zip files of the `wp-graphql-acf` repository and install it through WP-Admin or just **navigate to your plugin folder** and do a `git clone` like so:
+2.) Install and activate [Classic Editor](https://wordpress.org/plugins/classic-editor/) editor from the plugin admin interface. It will help you to only show the page builder fields and hide the content editor where we don't need it.
+
+3.) You can download the .zip files of the `wp-graphql-acf` repository and install it through WP-Admin or just **navigate to your plugin folder** and do a `git clone` like so:
 
 ```shell
 git clone https://github.com/wp-graphql/wp-graphql-acf
@@ -73,7 +76,7 @@ We will add a flexible content field and 2 layouts to start with.
 - We added one field of type `Flexible Content` with the name `layouts`
 - In the `Location settings` we add the rule `Post type is equal to Page`, so the page builder will be only visible for our pages, but not our posts.
 
-![ACF PageBuilder Settings](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/07/acf-pagebuilder-settings.png)
+![ACF PageBuilder Settings](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/07/acf-fieldgroup-settings.png)
 
 - When you scroll down you see `GraphQL Field Name` in the Settings tab. Make sure to give it a camelCase name. This will be the field name for the GraphQL schema.
 - We call it `pageBuilder`
@@ -85,15 +88,15 @@ We will add a flexible content field and 2 layouts to start with.
 - Always make sure to have `Show in GraphQL` to be turned on.
 - Inside the flexible content field we add layouts with some fields like in the picture above. We add two for now: `Hero` and `TextBlock`
 - The **name** of the layout usually is something with underscore, like `text_block`. This will then transform into `textBlock` in your GraphQL schema.
+- At **Hide on screen** make sure you selected `Content Editor`. This will hide the default editor on the pages where we use the page builder.
 
 ### 3.) Update your Pages
 
 Now that we have the ACF fields setup, we need to update our pages.
 
-![ACF Layouts](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/07/page-update.png)
+![ACF Layouts](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/07/page-edit.png)
 
-- Delete the content in the normal Gutenberg blocks.
-- Only leave the title at the top.
+- Delete the content in the normal Gutenberg blocks, if there has been content before.
 - At the bottom **open the Page Builder** tab and `Add Row`
   - Add your blocks and fill in some data.
 - I'm using the image for the `Hero` block and still leave it in thew `featuredImage`. This will give me the option to use a different featuredImage for social previews if I want to do so, later on.
@@ -724,7 +727,8 @@ This tutorial can be a lot to take in and it is hard for me to write a super det
 
 I hope this will make it more accessible for everyone.
 
-{% youtube somecode %}
+
+-> Video <-
 
 
 ## Final Thoughts :checkered_flag:

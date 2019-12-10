@@ -82,7 +82,7 @@ The GraphQL endpoint is serving us with absolute URLs to the WordPress instance.
 
 2.) Creating **MenuItem component**, that uses our util function:
 
-```javascript
+```jsx
 // src/components/MenuItem.js
 
 import React from "react"
@@ -101,7 +101,7 @@ export default MenuItem
 
 3.) Creating **Menu component**, that uses our MenuItem component:
 
-```javascript
+```jsx
 // src/components/Menu.js
 
 import React from "react"
@@ -172,7 +172,7 @@ Here we are using Gatsby's [StaticQuery](https://www.gatsbyjs.org/docs/static-qu
 
 4.) And finally **adding the Menu** to `layout.js`:
 
-```javascript
+```jsx
 // src/components/layout.js
 
 /**
@@ -279,7 +279,7 @@ Gatsby's Link component doesn't support the use of external links. We want to be
 
 1.) **Create UniversalLink component**:
 
-```javascript
+```jsx
 // src/components/UniversalLink.js
 
 import React from "react"
@@ -316,7 +316,7 @@ export default UniversalLink
 
 2.) **Update `MenuItem.js`**:
 
-```javascript
+```jsx
 // src/components/MenuItem.js
 
 import React from "react"

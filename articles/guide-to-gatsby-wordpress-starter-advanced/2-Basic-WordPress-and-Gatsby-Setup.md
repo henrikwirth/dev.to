@@ -136,7 +136,7 @@ Add the following to your configs `module.exports` inside `plugins:[...]`:
     },
 ```
 
-This will hook up your Gatsby with the WordPress instance. And expose this data under `wpgraphql`. **Note: This makes your schema different to the one that is exposed in you WordPress GraphQL endpoint. As soon as you are usinging it with Gatsby, you now have to wrap your queries with `wpgraphql{...}`**.
+This will hook up your Gatsby with the WordPress instance. And expose this data under `wpgraphql`. **Note: This makes your schema different to the one that is exposed in you WordPress GraphQL endpoint. As soon as you are using it with Gatsby, you now have to wrap your queries with `wpgraphql{...}`**.
 
 Try running `gatsby develop` and navigate to `http://localhost:8000/___graphql`. You will see something like this. Play around with the GraphiQL-Explorer to get familiar with the WPGraphQL schema.
 
