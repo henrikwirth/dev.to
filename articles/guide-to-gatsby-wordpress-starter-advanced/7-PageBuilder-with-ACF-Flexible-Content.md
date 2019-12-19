@@ -78,8 +78,9 @@ We will add a flexible content field and 2 layouts to start with.
 
 ![ACF PageBuilder Settings](https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/07/acf-fieldgroup-settings.png)
 
+- At **Hide on screen** make sure you selected `Content Editor`. This will hide the default editor on the pages where we use the page builder.
 - When you scroll down you see `GraphQL Field Name` in the Settings tab. Make sure to give it a camelCase name. This will be the field name for the GraphQL schema.
-- We call it `pageBuilder`
+    - We call it `pageBuilder`
 
 ### 2.) Create Layouts inside the Flexible Content field
 
@@ -88,7 +89,6 @@ We will add a flexible content field and 2 layouts to start with.
 - Always make sure to have `Show in GraphQL` to be turned on.
 - Inside the flexible content field we add layouts with some fields like in the picture above. We add two for now: `Hero` and `TextBlock`
 - The **name** of the layout usually is something with underscore, like `text_block`. This will then transform into `textBlock` in your GraphQL schema.
-- At **Hide on screen** make sure you selected `Content Editor`. This will hide the default editor on the pages where we use the page builder.
 
 ### 3.) Update your Pages
 
@@ -730,24 +730,24 @@ export default Page
 
 ## Explanation Video :movie_camera:
 
-This tutorial can be a lot to take in and it is hard for me to write a super detailed explanation of everything down. So I decided to record a video, where I would go through the steps mentioned in this tutorial and verbally explain what my thoughts to the process are.
+This tutorial can be a lot to take in and it is hard for me to write a super detailed explanation of everything down. So I decided to record a video, where I would go through the steps mentioned in this tutorial and verbally explain what my thoughts to the implementation choices are.
 
-I hope this will make it more accessible for everyone.
+I hope I find the time to finish the video soon. Stay tuned.
 
-
--> Video <-
+-> Video - Coming soon <-
 
 
 ## Final Thoughts :checkered_flag:
 
-Checkout how [the site](https://gatsby-starter-wordpress-advanced.netlify.com/) looks now:
+Boom, now we have **a way to dynamically render blocks** created through ACF flexible content layouts. Surely this is not a full-fledged page builder yet, as we we can't use layouts inside layouts. But, **we can add and order section by section**, which for most use-cases, should be more than enough. This approach would now allow you to create reusable layouts and therefore is a powerful way to create your pages.
 
-...
+There is also a way to use the Gutenberg blocks with the [wp-graphql-gutenberg](https://github.com/pristas-peter/wp-graphql-gutenberg) plugin created by [https://github.com/pristas-peter](Peter Pristas). While this is a valid way to work with WordPress, I'm not the biggest fan of how to implement Gutenberg blocks and work with the editor. This might change though, with how things develop.
+
+Checkout how the site looks now here: [https://gatsby-starter-wordpress-advanced.netlify.com/](https://gatsby-starter-wordpress-advanced.netlify.com/)
 
 Find the code base here: [https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-7](https://github.com/henrikwirth/gatsby-starter-wordpress-advanced/tree/tutorial/part-7)
 
 
 ## What's Next :arrow_right:
-
 
 Coming up soon: **Part 8** - Internationalization
