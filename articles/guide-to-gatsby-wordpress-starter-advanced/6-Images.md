@@ -514,4 +514,4 @@ Find the code base here: [https://github.com/henrikwirth/gatsby-starter-wordpres
 
 We'll dive into Advanced Custom Fields Flexible Content field and create a page-builder like experience with it. This will open us the doors, to dynamically create UI elements filled with content.
 
-Coming up soon: **Part 7** - PageBuilder with ACF Flexible Content
+**Part 7** - [PageBuilder with ACF Flexible Content](https://dev.to/nevernull/pagebuilder-with-acf-flexible-content-guide-to-gatsby-wordpress-starter-advanced-with-previews-i18n-and-more-2lf4)
