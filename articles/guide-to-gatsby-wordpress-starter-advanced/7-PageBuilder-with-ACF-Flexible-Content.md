@@ -741,7 +741,7 @@ I hope I find the time to finish the video soon. Stay tuned.
 
 Boom, now we have **a way to dynamically render blocks** created through ACF flexible content layouts. Surely this is not a full-fledged page builder yet, as we we can't use layouts inside layouts. But, **we can add and order section by section**, which for most use-cases, should be more than enough. This approach would now allow you to create reusable layouts and therefore is a powerful way to create your pages.
 
-There is also a way to use the Gutenberg blocks with the [wp-graphql-gutenberg](https://github.com/pristas-peter/wp-graphql-gutenberg) plugin created by [https://github.com/pristas-peter](Peter Pristas). While this is a valid way to work with WordPress, I'm not the biggest fan of how to implement Gutenberg blocks and work with the editor. This might change though, with how things develop.
+There is also a way to use the Gutenberg blocks with the [wp-graphql-gutenberg](https://github.com/pristas-peter/wp-graphql-gutenberg) plugin created by [Peter Pristas](https://github.com/pristas-peter). While this is a valid way to work with WordPress, I'm not the biggest fan of how to implement Gutenberg blocks and work with the editor. This might change though, with how things develop.
 
 Checkout how the site looks now here: [https://gatsby-starter-wordpress-advanced.netlify.com/](https://gatsby-starter-wordpress-advanced.netlify.com/)
 
