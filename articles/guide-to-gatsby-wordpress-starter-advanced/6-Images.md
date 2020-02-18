@@ -75,7 +75,7 @@ We gonna make use of Gatsby's abilities to add custom resolvers, to customize th
 
 const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
 
-exports.createResolvers = (
+exports.createResolvers = async (
   {
     actions,
     cache,
@@ -86,13 +86,20 @@ exports.createResolvers = (
   },
 ) => {
   const { createNode } = actions
-  createResolvers({
+
+  await createResolvers({
     WPGraphQL_MediaItem: {
       imageFile: {
-        type: `File`,
-        resolve(source, args, context, info) {
-          return createRemoteFileNode({
-            url: source.sourceUrl,
+        type: "File",
+        async resolve(source) {
+          let sourceUrl = source.sourceUrl
+
+          if (source.mediaItemUrl !== undefined) {
+            sourceUrl = source.mediaItemUrl
+          }
+
+          return await createRemoteFileNode({
+            url: encodeURI(sourceUrl),
             store,
             cache,
             createNode,
@@ -109,7 +116,8 @@ exports.createResolvers = (
 - [createRemoteFileNode](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/#createremotefilenode) gives you the ability to pull in remote files and automatically adds them to your schema.
 - `imageFile`: will be the type you can query (see below).
 - `type: 'File'`: will add the MediaItems as Files, which is great, because now gatsby-image can make use of it.
-- `url: source.sourceUrl`: Is the images Url coming from your WordPress
+- `url: encodeURI(sourceUrl)`: Here we encode the Url coming from WordPress, to make sure it is parsed correctly even if the image paths include umlauts.
+
 
 ### 2.) Add fluid Image fragment
 

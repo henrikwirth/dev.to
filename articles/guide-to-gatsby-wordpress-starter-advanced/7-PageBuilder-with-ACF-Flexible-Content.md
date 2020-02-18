@@ -2,7 +2,7 @@
 published: true
 title: "PageBuilder with ACF Flexible Content - Guide to Gatsby WordPress Starter Advanced with Previews, i18n and more"
 cover_image: "https://raw.githubusercontent.com/henrikwirth/dev.to/master/articles/guide-to-gatsby-wordpress-starter-advanced/images/07/cover.png"
-description: "Learn how to create a page builder like experience in @WordPress with Advanced Custom Field's (@wp_acf) Flexible Content field for your @GatsbbyJS site"
+description: "🚀 Learn how to create a page builder like experience in @WordPress with Advanced Custom Field's (@wp_acf) Flexible Content field for your @GatsbyJS site ✨"
 tags: gatsby, wordpress, webdev, tutorial
 series: "Guide to Gatsby WordPress Starter Advanced"
 canonical_url:

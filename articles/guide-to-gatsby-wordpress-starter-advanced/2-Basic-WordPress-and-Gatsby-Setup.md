@@ -150,7 +150,8 @@ Now let's see, how we can create pages and posts, based on the WordPress data. *
 #### Page Template
 
 ```jsx
-//src/templates/pages/page.js
+// src/templates/page/index.js
+
 import React  from "react"
 
 import Layout from "../../components/layout"
@@ -178,6 +179,8 @@ export default Page
 #### Post Template
 
 ```jsx
+// src/templates/post/index.js
+
 import React  from "react"
 
 import Layout from "../../components/layout"
