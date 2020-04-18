@@ -283,6 +283,7 @@ const PageTemplateFragment = (layouts) => `
         pageId
         content
         uri
+        slug
         isFrontPage
         featuredImage {
             sourceUrl
@@ -563,7 +564,7 @@ module.exports.createPageWithTemplate = ({ createTemplate, templateCacheFolder, 
     {
       templateCacheFolderPath: templateCacheFolder,
       templatePath: pageTemplate,
-      templateName: "tmp-" + page.uri,
+      templateName: "tmp-" + page.slug,
       imports: mappedLayouts,
     }).then(() => {
 
@@ -572,7 +573,7 @@ module.exports.createPageWithTemplate = ({ createTemplate, templateCacheFolder, 
      */
     createPage({
       path: pagePath,
-      component: path.resolve(templateCacheFolder + "/" + "tmp-" + page.uri + ".js"),
+      component: path.resolve(templateCacheFolder + "/" + "tmp-" + page.slug + ".js"),
       context: {
         page: page,
       },
@@ -625,7 +626,7 @@ Then further down:
 // create/createPages.js
 
 wpPages && wpPages.map((page) => {
-      let pagePath = `/${page.uri}/`
+      let pagePath = `${page.uri}`
 
       /**
        * If the page is the front page, the page path should not be the uri,
