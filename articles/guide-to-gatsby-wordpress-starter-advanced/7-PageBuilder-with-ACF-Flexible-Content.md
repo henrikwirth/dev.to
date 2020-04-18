@@ -510,13 +510,13 @@ export default Page
 
 > I won't explain too much detail in this written part. Please watch [the video]() for it.
 
-One problem with our `AllLayouts` component we have, is that the way we implemented it now, on every page, **we import all layout components we have, even if we don't need them.**
+One problem with our `AllLayouts` component we have, is, that the way we implemented it now, on every page, **we import all layout components we have, even if we don't need them.**
 
 This is fine if we have just a few components, but **imagine with have 50 different layouts in our page builder. We don't want them all imported on every page.**
 
 For that we will use a little hacky, but in my opinion efficient way to **generate templates out of template strings**.
 
-### 1.) Add more utiliy functions
+### 1.) Add more utility functions
 
 ```javascript
 // create/utils.js
@@ -540,7 +540,7 @@ module.exports.createTemplate = ({ templateCacheFolderPath, templatePath, templa
     fs.mkdir(templateCacheFolderPath, { recursive: true }, (err) => {
       if (err) throw "Error creating template-cache folder: " + err
 
-      const filePath = templateCacheFolderPath + "/" + templateName + ".js"
+      const filePath = templateCacheFolderPath + "/" + ((templateName === "/" || templateName === "") ? "home" : templateName) + ".js"
 
       fs.writeFile(filePath, contents, "utf8", err => {
         if (err) throw "Error writing " + templateName + " template: " + err
